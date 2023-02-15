@@ -21,12 +21,12 @@ func load_data():
 	var file = FileAccess.open(SAVE_FILE, FileAccess.READ)
 	game_data = file.get_var()
 	# Equivale a file.close
-	file.close()
+	file = null
 	
 func save_data():
 	
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
 	file.store_var(game_data)
-	file.close()
+	file = null
 	
 	

@@ -49,12 +49,11 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_jitc4")
 theme_override_font_sizes/font_size = 30
 item_count = 2
-selected = 0
-popup/item_0/text = "Windowed"
-popup/item_0/icon = SubResource("ViewportTexture_uj6i3")
+selected = 1
+popup/item_0/text = "Full Screen"
 popup/item_0/id = 0
-popup/item_1/text = "Full Screen"
-popup/item_1/id = 1
+popup/item_1/text = "Windowed"
+popup/item_1/id = 3
 
 [node name="Audio" type="TabBar" parent="TabContainer"]
 visible = false
