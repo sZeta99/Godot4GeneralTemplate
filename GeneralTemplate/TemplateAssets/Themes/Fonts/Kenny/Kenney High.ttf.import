@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dh07lmhue40oj"
+path="res://.godot/imported/Kenney High.ttf-818b09b5d22954c6bf9d98a1f64a7b26.fontdata"
+
+[deps]
+
+source_file="res://TemplateAssets/Themes/Fonts/Kenny/Kenney High.ttf"
+dest_files=["res://.godot/imported/Kenney High.ttf-818b09b5d22954c6bf9d98a1f64a7b26.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
