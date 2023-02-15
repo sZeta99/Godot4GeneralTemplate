@@ -1,10 +1,13 @@
 extends Node
 
 const START_SCENE = "res://TemplateAssets/Scenes/UI/main_menu.tscn"
+@onready var SETTING_MENU = %Settings
+@onready var START_BUTTON = $MarginContainer/VBoxContainer/StartButton
+
 
 func _ready():
 	#Setta come iniziale il tasto start, permette di scorrere con le frecette
-	$VBoxContainer/StartButton.grab_focus()
+	START_BUTTON.grab_focus()
 	pass
 # On Start Button
 func _on_start_button_pressed():
@@ -15,6 +18,7 @@ func _on_start_button_pressed():
 # On Options Button
 func _on_options_button_pressed():
 	print_debug("Options Opened")
+	SETTING_MENU.popup_centered_ratio()
 	pass # Replace with function body.
 
 # On Exit Button

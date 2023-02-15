@@ -1,45 +1,72 @@
-[gd_scene load_steps=3 format=3 uid="uid://byrftiyuve0as"]
+[gd_scene load_steps=4 format=3 uid="uid://byrftiyuve0as"]
 
 [ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/MainMenu.gd" id="1_knnpc"]
 [ext_resource type="FontFile" uid="uid://dgryjy84ofn6e" path="res://TemplateAssets/Themes/Fonts/Kenny/Kenney Mini.ttf" id="2_1wm1y"]
+[ext_resource type="PackedScene" uid="uid://bx5qp3whi8rxq" path="res://TemplateAssets/Scenes/UI/Settings.tscn" id="3_ejdsg"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_knnpc")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 21.617
-offset_top = -103.0
-offset_right = 179.617
-grow_vertical = 0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_1wm1y")
+theme_override_font_sizes/font_size = 100
+text = "Game Name"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../ExitButton")
 theme_override_fonts/font = ExtResource("2_1wm1y")
+theme_override_font_sizes/font_size = 30
 text = "Start"
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_1wm1y")
-theme_override_font_sizes/font_size = 0
+theme_override_font_sizes/font_size = 30
 text = "Options"
 
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../StartButton")
 theme_override_fonts/font = ExtResource("2_1wm1y")
+theme_override_font_sizes/font_size = 30
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[node name="Settings" parent="MarginContainer/VBoxContainer" instance=ExtResource("3_ejdsg")]
+unique_name_in_owner = true
+handle_input_locally = false
+visible = false
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
