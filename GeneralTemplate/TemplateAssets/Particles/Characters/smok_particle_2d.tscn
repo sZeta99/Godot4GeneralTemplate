@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl7ryoxhiio6s"]
+
+[sub_resource type="Gradient" id="Gradient_prh4s"]
+offsets = PackedFloat32Array(0, 0.992443)
+colors = PackedColorArray(0, 0, 0, 1, 0.332881, 0.332881, 0.332881, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_m4qaa"]
+gradient = SubResource("Gradient_prh4s")
+
+[sub_resource type="Curve" id="Curve_pxc86"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yp7ch"]
+curve = SubResource("Curve_pxc86")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t5lbb"]
+lifetime_randomness = 0.32
+emission_shape = 1
+emission_sphere_radius = 112.57
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+gravity = Vector3(0, -20, 0)
+initial_velocity_min = 26.6
+initial_velocity_max = 26.6
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_min = -6.5
+angle_max = 38.1
+scale_min = 49.68
+scale_max = 49.68
+scale_curve = SubResource("CurveTexture_yp7ch")
+color_ramp = SubResource("GradientTexture1D_m4qaa")
+turbulence_noise_strength = 6.31
+turbulence_noise_scale = 4.83
+
+[node name="SmokParticle2D" type="GPUParticles2D"]
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_t5lbb")
+lifetime = 10.0

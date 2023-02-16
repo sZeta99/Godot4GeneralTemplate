@@ -17,8 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalSettings="*res://TemplateAssets/Scripts/UI/GlobalSettings.gd"
-SaveSettings="*res://TemplateAssets/Scripts/UI/SaveSettings.gd"
+SaveData="*res://TemplateAssets/Scripts/UI/SaveData.gd"
 
 [display]
 
