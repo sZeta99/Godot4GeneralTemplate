@@ -1,5 +1,6 @@
 extends Node
 
+
 const START_SCENE = "res://TemplateAssets/Scenes/UI/main_menu.tscn"
 @onready var SETTING_MENU = %Settings
 @onready var START_BUTTON = $MarginContainer/VBoxContainer/StartButton
@@ -21,8 +22,3 @@ func _on_options_button_pressed():
 	SETTING_MENU.popup_centered_ratio()
 	pass # Replace with function body.
 
-# On Exit Button
-func _on_exit_button_pressed():
-	print_debug("Quit Game")
-	get_tree().quit()
-	pass # Replace with function body.
