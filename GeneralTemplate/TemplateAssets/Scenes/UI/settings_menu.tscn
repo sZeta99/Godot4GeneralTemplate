@@ -1,16 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://bx5qp3whi8rxq"]
 
+[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/SettingMenu.gd" id="1_3b6kd"]
 [ext_resource type="FontFile" uid="uid://dgryjy84ofn6e" path="res://TemplateAssets/Themes/Fonts/Kenny/Kenney Mini.ttf" id="1_jitc4"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_uj6i3"]
-
 [node name="Settings" type="PopupPanel"]
+disable_3d = true
+gui_embed_subwindows = true
+title = "Settings"
 size = Vector2i(1280, 720)
 visible = true
-transparent = true
+script = ExtResource("1_3b6kd")
 
 [node name="TabContainer" type="TabContainer" parent="."]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 4.0
@@ -41,17 +43,36 @@ theme_override_font_sizes/font_size = 30
 text = "Display Mode"
 uppercase = true
 
-[node name="OptionButton" type="OptionButton" parent="TabContainer/Video/MarginContainer/GridContainer"]
+[node name="FullScreenButton" type="OptionButton" parent="TabContainer/Video/MarginContainer/GridContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_jitc4")
 theme_override_font_sizes/font_size = 30
 item_count = 2
-selected = 0
-popup/item_0/text = "Windowed"
-popup/item_0/icon = SubResource("ViewportTexture_uj6i3")
+selected = 1
+popup/item_0/text = "Full Screen"
 popup/item_0/id = 0
-popup/item_1/text = "Full Screen"
+popup/item_1/text = "Windowed"
+popup/item_1/id = 3
+
+[node name="Resolution" type="Label" parent="TabContainer/Video/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jitc4")
+theme_override_font_sizes/font_size = 30
+text = " Window Resolution"
+uppercase = true
+
+[node name="ResolutionButton" type="OptionButton" parent="TabContainer/Video/MarginContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_jitc4")
+theme_override_font_sizes/font_size = 30
+item_count = 3
+selected = 1
+popup/item_0/text = "720 x 576"
+popup/item_0/id = 0
+popup/item_1/text = "1280 x 720"
 popup/item_1/id = 1
+popup/item_2/text = "1920 x 1080"
+popup/item_2/id = 2
 
 [node name="Audio" type="TabBar" parent="TabContainer"]
 visible = false
@@ -69,21 +90,5 @@ layout_mode = 2
 theme_override_constants/h_separation = 100
 columns = 2
 
-[node name="VideoSettings" type="Label" parent="TabContainer/Audio/MarginContainer2/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_jitc4")
-theme_override_font_sizes/font_size = 30
-text = "Display Mode"
-uppercase = true
-
-[node name="OptionButton" type="OptionButton" parent="TabContainer/Audio/MarginContainer2/GridContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_jitc4")
-theme_override_font_sizes/font_size = 30
-item_count = 2
-selected = 0
-popup/item_0/text = "Windowed"
-popup/item_0/icon = SubResource("ViewportTexture_uj6i3")
-popup/item_0/id = 0
-popup/item_1/text = "Full Screen"
-popup/item_1/id = 1
+[connection signal="item_selected" from="TabContainer/Video/MarginContainer/GridContainer/FullScreenButton" to="." method="_on_full_screen_button_item_selected"]
+[connection signal="item_selected" from="TabContainer/Video/MarginContainer/GridContainer/ResolutionButton" to="." method="_on_resolution_button_item_selected"]
