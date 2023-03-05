@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4ebpl6wuho0n"]
+[gd_scene load_steps=6 format=3 uid="uid://cntx34pkpxsds"]
 
 [ext_resource type="FontFile" uid="uid://dgryjy84ofn6e" path="res://TemplateAssets/Themes/Fonts/Kenny/Kenney Mini.ttf" id="2_1wm1y"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/StartGameButton.gd" id="2_2a1p2"]
-[ext_resource type="PackedScene" uid="uid://cnx8ibrtthqjr" path="res://TemplateAssets/Scenes/CharacterContoller/PlayerController/2D/top_down_character_controller.tscn" id="3_a04fv"]
+[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/LoadSceneButton.gd" id="2_dt2cv"]
 [ext_resource type="PackedScene" uid="uid://bx5qp3whi8rxq" path="res://TemplateAssets/Scenes/UI/settings_menu.tscn" id="3_ejdsg"]
 [ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/ExitGameButton.gd" id="3_q6xg4"]
 [ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/SettingsButton.gd" id="3_vsum0"]
@@ -50,8 +49,8 @@ focus_neighbor_top = NodePath("../ExitButton")
 theme_override_fonts/font = ExtResource("2_1wm1y")
 theme_override_font_sizes/font_size = 30
 text = "Start"
-script = ExtResource("2_2a1p2")
-StartScene = ExtResource("3_a04fv")
+script = ExtResource("2_dt2cv")
+SceneToLoad = "uid://cvymj868ylwbx"
 
 [node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
