@@ -3,7 +3,6 @@ extends Button
 @onready var SETTING_MENU = %Settings
 
 func _ready():
-	
 	self.pressed.connect(_on_options_button_pressed)
 	pass
 	

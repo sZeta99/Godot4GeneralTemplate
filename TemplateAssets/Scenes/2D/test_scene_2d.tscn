@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dufcxgonxnf3f" path="res://TemplateAssets/Scenes/CharacterContoller/PlayerController/2D/top_down_character_controller.tscn" id="1_ifiss"]
 
+
 [sub_resource type="Curve" id="Curve_e02u7"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2

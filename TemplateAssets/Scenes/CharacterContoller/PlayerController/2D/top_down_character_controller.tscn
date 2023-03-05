@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=7 format=3 uid="uid://dufcxgonxnf3f"]
 
 [ext_resource type="Script" path="res://TemplateAssets/Scripts/CharacterControllers/2D/TopDown/TopDownCharacterController.gd" id="1_r5l5d"]
@@ -10,14 +11,17 @@ point_count = 2
 
 [sub_resource type="Curve" id="Curve_5ko01"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+
 point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg0ea"]
 
 [node name="TopDownCharacterController" type="CharacterBody2D"]
+
 script = ExtResource("1_r5l5d")
 maxSpeed = 400.0
 frictionUnit = 0.1
+
 accelerationCurve = SubResource("Curve_k6jst")
 frictionCurve = SubResource("Curve_5ko01")
 
@@ -28,3 +32,4 @@ shape = SubResource("CircleShape2D_hg0ea")
 texture = ExtResource("2_87sca")
 
 [node name="PauseMenu" parent="." instance=ExtResource("3_073sp")]
+
