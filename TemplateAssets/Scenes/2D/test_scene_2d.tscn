@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvymj868ylwbx"]
+
+[ext_resource type="PackedScene" uid="uid://cnx8ibrtthqjr" path="res://TemplateAssets/Scenes/CharacterContoller/PlayerController/2D/top_down_character_controller.tscn" id="1_ifiss"]
+
+[sub_resource type="Curve" id="Curve_e02u7"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="TestScene2D" type="Node2D"]
+
+[node name="TopDownCharacterController" parent="." instance=ExtResource("1_ifiss")]
+position = Vector2(598, 363)
+accelerationCurve = SubResource("Curve_e02u7")
