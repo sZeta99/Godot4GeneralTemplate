@@ -57,6 +57,10 @@ ui_down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_32="Collectables"
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.14902, 0.192157, 0.219608, 1)
