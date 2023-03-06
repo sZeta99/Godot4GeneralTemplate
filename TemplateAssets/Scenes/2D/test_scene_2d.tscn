@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cvymj868ylwbx"]
+[gd_scene load_steps=4 format=3 uid="uid://cvymj868ylwbx"]
 
 [ext_resource type="PackedScene" uid="uid://cnx8ibrtthqjr" path="res://TemplateAssets/Scenes/CharacterContoller/PlayerController/2D/top_down_character_controller.tscn" id="1_ifiss"]
-[ext_resource type="PackedScene" uid="uid://dsj6gw8gfu1a3" path="res://TemplateAssets/Scenes/2D/PickUpItem/CollectItemAuto.tscn" id="2_ykb11"]
 [ext_resource type="PackedScene" uid="uid://b5auus3atmyhx" path="res://TemplateAssets/Scenes/2D/PickUpItem/ItemCollectablePlaceHolder.tscn" id="3_ri06s"]
 
 [sub_resource type="Curve" id="Curve_e02u7"]
@@ -13,10 +12,6 @@ point_count = 2
 [node name="TopDownCharacterController" parent="." instance=ExtResource("1_ifiss")]
 position = Vector2(598, 363)
 accelerationCurve = SubResource("Curve_e02u7")
-
-[node name="CollectItemAuto" parent="TopDownCharacterController" instance=ExtResource("2_ykb11")]
-position = Vector2(0, 1)
-scale = Vector2(4, 4)
 
 [node name="ItemCollectablePlaceHolder" parent="." instance=ExtResource("3_ri06s")]
 position = Vector2(194, 88)
