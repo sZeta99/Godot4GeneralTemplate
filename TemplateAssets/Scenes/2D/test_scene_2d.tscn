@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvymj868ylwbx"]
 
-[ext_resource type="PackedScene" uid="uid://cnx8ibrtthqjr" path="res://TemplateAssets/Scenes/CharacterContoller/PlayerController/2D/top_down_character_controller.tscn" id="1_ifiss"]
+[ext_resource type="PackedScene" path="res://TemplateAssets/Scenes/CharacterContoller/PlayerController/2D/top_down_character_controller.tscn" id="1_ifiss"]
 [ext_resource type="PackedScene" uid="uid://b5auus3atmyhx" path="res://TemplateAssets/Scenes/2D/PickUpItem/ItemCollectablePlaceHolder.tscn" id="3_ri06s"]
 
 [sub_resource type="Curve" id="Curve_e02u7"]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnx8ibrtthqjr"]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://TemplateAssets/Scenes/2D/TopDownCharacterController.gd" id="1_mgtvm"]
 [ext_resource type="Texture2D" uid="uid://vdausc3mjakg" path="res://icon.svg" id="2_87sca"]
-[ext_resource type="PackedScene" uid="uid://dsj6gw8gfu1a3" path="res://TemplateAssets/Scenes/2D/PickUpItem/CollectItemAuto.tscn" id="3_rdub5"]
+[ext_resource type="PackedScene" uid="uid://dsj6gw8gfu1a3" path="res://TemplateAssets/Scenes/2D/PickUpItem/ItemCollector.tscn" id="3_rdub5"]
 
 [sub_resource type="Curve" id="Curve_k6jst"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]

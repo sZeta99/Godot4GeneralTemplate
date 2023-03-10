@@ -1,15 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsj6gw8gfu1a3"]
 
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/CharacterController/collectorObject.gd" id="1_tqhot"]
+[ext_resource type="Script" path="res://TemplateAssets/Scripts/CharacterController/collectorObject.gd" id="1_nbr0d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qr8tr"]
 radius = 18.0278
 
-[node name="Area2D" type="Area2D"]
+[node name="ItemCollector" type="Area2D"]
 collision_layer = 2147483648
 collision_mask = 2147483648
 input_pickable = false
-script = ExtResource("1_tqhot")
+script = ExtResource("1_nbr0d")
+groupe = "Collectables"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 1)
