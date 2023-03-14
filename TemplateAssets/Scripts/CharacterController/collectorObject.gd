@@ -1,4 +1,6 @@
 extends Area2D
+
+class_name Collector 
 ##  Emitted when a Collectabal Item get "Picked Up", pass the Object item(Node2D)
 signal item_collected(item: Node2D)
 ## Groupe of the collectable Item, a Object mabey is better
