@@ -1,17 +1,15 @@
 extends Label
 
+@export var collector : Collector
 var coin = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var collector = $"../TopDownCharacterController"
-	collector = collector.find_child("ItemCollector")
-	collector.item_collected.connect(collect)
-	self.text = "Coin Collected : "+ str(coin)
-	
+	self.text= "Coin Collected : "+str(coin)
+	collector.item_collected.connect(_on_item_collector_item_collected)
 	pass # Replace with function body.
 
-func collect(item):
+
+func _on_item_collector_item_collected(item):
 	coin = coin + 1
 	self.text= "Coin Collected : "+str(coin)
-	pass
-	
+	pass # Replace with function body.
