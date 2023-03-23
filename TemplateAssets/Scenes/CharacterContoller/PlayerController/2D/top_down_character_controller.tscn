@@ -32,3 +32,5 @@ texture = ExtResource("2_87sca")
 [node name="Collector" parent="." instance=ExtResource("3_6omym")]
 collision_layer = 0
 input_pickable = true
+
+
