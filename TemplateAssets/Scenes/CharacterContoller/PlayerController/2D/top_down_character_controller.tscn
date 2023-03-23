@@ -1,9 +1,11 @@
+[gd_scene load_steps=8 format=3 uid="uid://da4ecqsuxeycf"]
 
 [gd_scene load_steps=7 format=3 uid="uid://dufcxgonxnf3f"]
 
 [ext_resource type="Script" path="res://TemplateAssets/Scripts/CharacterControllers/2D/TopDown/TopDownCharacterController.gd" id="1_r5l5d"]
 [ext_resource type="Texture2D" uid="uid://vdausc3mjakg" path="res://icon.svg" id="2_87sca"]
-[ext_resource type="PackedScene" uid="uid://dcv3qyio37myw" path="res://TemplateAssets/Scenes/UI/pause_menu.tscn" id="3_073sp"]
+[ext_resource type="PackedScene" uid="uid://dsj6gw8gfu1a3" path="res://TemplateAssets/Scenes/2D/PickUpItem/ItemCollector.tscn" id="3_6omym"]
+[ext_resource type="PackedScene" uid="uid://duftrkm87hksf" path="res://TemplateAssets/Scenes/2D/InteractionSystem/Scene/Interactor.tscn" id="4_p8d2e"]
 
 [sub_resource type="Curve" id="Curve_k6jst"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -31,5 +33,8 @@ shape = SubResource("CircleShape2D_hg0ea")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_87sca")
 
-[node name="PauseMenu" parent="." instance=ExtResource("3_073sp")]
+[node name="Interactor" parent="." instance=ExtResource("4_p8d2e")]
 
+[node name="Collector" parent="." instance=ExtResource("3_6omym")]
+collision_layer = 0
+input_pickable = true

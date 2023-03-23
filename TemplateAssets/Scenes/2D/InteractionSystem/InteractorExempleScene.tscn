@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxt54ti7in5di"]
+
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/2D/InteractionSystem/InteractorExemple.gd" id="1_1p14l"]
+[ext_resource type="Texture2D" uid="uid://b4uw1bklp12sm" path="res://TemplateAssets/Scenes/2D/PickUpItem/placeholder/items.png" id="2_s0k6q"]
+[ext_resource type="PackedScene" uid="uid://da4ecqsuxeycf" path="res://TemplateAssets/Scenes/CharacterContoller/PlayerController/2D/top_down_character_controller.tscn" id="3_t4ro4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aoapw"]
+
+[node name="InteractorExempleScene" type="Node2D"]
+
+[node name="Area2D" type="StaticBody2D" parent="." node_paths=PackedStringArray("label")]
+position = Vector2(254, 93)
+scale = Vector2(4, 4)
+collision_layer = 1073741824
+script = ExtResource("1_1p14l")
+label = NodePath("Label")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_s0k6q")
+hframes = 16
+vframes = 16
+frame = 50
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_aoapw")
+
+[node name="Label" type="Label" parent="Area2D"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Test"
+
+[node name="TopDownCharacterController" parent="." instance=ExtResource("3_t4ro4")]
+position = Vector2(536, 156)
