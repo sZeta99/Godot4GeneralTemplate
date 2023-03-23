@@ -1,29 +1,23 @@
 [gd_scene load_steps=8 format=3 uid="uid://da4ecqsuxeycf"]
 
-[gd_scene load_steps=7 format=3 uid="uid://dufcxgonxnf3f"]
-
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/CharacterControllers/2D/TopDown/TopDownCharacterController.gd" id="1_r5l5d"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/2D/TopDownCharacterController.gd" id="1_mgtvm"]
 [ext_resource type="Texture2D" uid="uid://vdausc3mjakg" path="res://icon.svg" id="2_87sca"]
 [ext_resource type="PackedScene" uid="uid://dsj6gw8gfu1a3" path="res://TemplateAssets/Scenes/2D/PickUpItem/ItemCollector.tscn" id="3_6omym"]
 [ext_resource type="PackedScene" uid="uid://duftrkm87hksf" path="res://TemplateAssets/Scenes/2D/InteractionSystem/Scene/Interactor.tscn" id="4_p8d2e"]
 
 [sub_resource type="Curve" id="Curve_k6jst"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_5ko01"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-
+max_value = 0.2
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.2), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hg0ea"]
 
 [node name="TopDownCharacterController" type="CharacterBody2D"]
-
-script = ExtResource("1_r5l5d")
-maxSpeed = 400.0
-frictionUnit = 0.1
-
+script = ExtResource("1_mgtvm")
 accelerationCurve = SubResource("Curve_k6jst")
 frictionCurve = SubResource("Curve_5ko01")
 
@@ -38,3 +32,5 @@ texture = ExtResource("2_87sca")
 [node name="Collector" parent="." instance=ExtResource("3_6omym")]
 collision_layer = 0
 input_pickable = true
+
+
