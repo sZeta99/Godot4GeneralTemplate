@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://duftrkm87hksf"]
+
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/2D/InteractionSystem/Scene/Interactor.gd" id="1_nc60w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2rmkg"]
+
+[node name="Interactor" type="Area2D"]
+scale = Vector2(10, 10)
+collision_layer = 1073741824
+collision_mask = 1073741824
+script = ExtResource("1_nc60w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2rmkg")
