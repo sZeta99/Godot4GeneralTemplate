@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bx5qp3whi8rxq"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/SettingMenu.gd" id="1_3b6kd"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/SettingsMenu/SettingMenu.gd" id="1_3b6kd"]
 [ext_resource type="FontFile" uid="uid://dgryjy84ofn6e" path="res://TemplateAssets/Themes/Fonts/Kenny/Kenney Mini.ttf" id="1_jitc4"]
 
 [node name="Settings" type="PopupPanel"]

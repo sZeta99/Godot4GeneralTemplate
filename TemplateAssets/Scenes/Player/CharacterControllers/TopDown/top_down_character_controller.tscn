@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1s0abnaj2fa2"]
+
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/Player/CharacterControllers/TopDown/TopDownCharacterController.gd" id="1_q5fr3"]
+[ext_resource type="Texture2D" uid="uid://vdausc3mjakg" path="res://icon.svg" id="2_5v71w"]
+[ext_resource type="PackedScene" path="res://TemplateAssets/Scenes/Player/Interactor/Interactor.tscn" id="3_pgrwc"]
+[ext_resource type="PackedScene" uid="uid://ccs4trsa17dpp" path="res://TemplateAssets/Scenes/Player/Collector/Collector.tscn" id="4_e3k23"]
+[ext_resource type="PackedScene" path="res://TemplateAssets/Scenes/UI/PauseMenu/pause_menu.tscn" id="5_2fbog"]
+
+[sub_resource type="Curve" id="Curve_1r0k5"]
+_data = [Vector2(0.294964, 0.945454), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_kckta"]
+_data = [Vector2(0.31295, 0.927273), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hg0ea"]
+
+[node name="TopDownCharacterController" type="CharacterBody2D"]
+script = ExtResource("1_q5fr3")
+accelerationCurve = SubResource("Curve_1r0k5")
+frictionCurve = SubResource("Curve_kckta")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_2fbog")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hg0ea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5v71w")
+
+[node name="Interactor" parent="." instance=ExtResource("3_pgrwc")]
+
+[node name="Collector" parent="." instance=ExtResource("4_e3k23")]
+input_pickable = true

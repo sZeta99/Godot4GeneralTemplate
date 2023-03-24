@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cym7mqx3a1b0"]
+
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/Player/Interactor/Exemple/InteractorExemple.gd" id="1_ex0e0"]
+[ext_resource type="Texture2D" uid="uid://b4uw1bklp12sm" path="res://TemplateAssets/Textures/items.png" id="2_jevwx"]
+[ext_resource type="PackedScene" uid="uid://biwkabddirt5q" path="res://TemplateAssets/Scenes/Player/CharacterControllers/TopDown/top_down_character_controller.tscn" id="3_rvxmo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aoapw"]
+
+[node name="InteractorExempleScene" type="Node2D"]
+
+[node name="TopDownCharacterController" parent="." instance=ExtResource("3_rvxmo")]
+position = Vector2(536, 156)
+
+[node name="Area2D" type="StaticBody2D" parent="." node_paths=PackedStringArray("label")]
+position = Vector2(254, 399)
+scale = Vector2(4, 4)
+collision_layer = 1073741824
+script = ExtResource("1_ex0e0")
+label = NodePath("Label")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_jevwx")
+hframes = 16
+vframes = 16
+frame = 50
+
+[node name="Label" type="Label" parent="Area2D"]
+offset_right = 42.0
+offset_bottom = 26.0
+text = "Open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_aoapw")
+
+[node name="Instuction" type="Label" parent="."]
+offset_left = 654.0
+offset_top = 26.0
+offset_right = 1147.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 48
+text = "Press E near the door"
