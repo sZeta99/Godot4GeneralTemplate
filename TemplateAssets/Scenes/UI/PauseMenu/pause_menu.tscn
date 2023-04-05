@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="FontFile" uid="uid://dgryjy84ofn6e" path="res://TemplateAssets/Themes/Fonts/Kenny/Kenney Mini.ttf" id="1_di6ri"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/PauseMenu/PauseMenu.gd" id="1_rjdih"]
+[ext_resource type="PackedScene" path="res://TemplateAssets/Scenes/UI/SettingsMenu/settings_menu.tscn" id="2_monga"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/LoadSceneButton.gd" id="2_yqrua"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/ResumeButton.gd" id="3_sqopa"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/SettingsButton.gd" id="4_uusmx"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/ExitGameButton.gd" id="5_5s851"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+layer = -1
+script = ExtResource("1_rjdih")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+
+modulate = Color(0.14902, 0.192157, 0.219608, 0.690196)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+
+[node name="Title" type="Label" parent="MarginContainer"]
+
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_di6ri")
+theme_override_font_sizes/font_size = 100
+text = "Pause"
+
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 14
+alignment = 1
+
+
+[node name="ResumeButton" type="Button" parent="MarginContainer/VBoxContainer" node_paths=PackedStringArray("PauseCanvasLayer")]
+
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+theme_override_fonts/font = ExtResource("1_di6ri")
+theme_override_font_sizes/font_size = 30
+text = "Resume"
+
+script = ExtResource("3_sqopa")
+PauseCanvasLayer = NodePath("../../..")
+
+[node name="MainMenuButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+theme_override_fonts/font = ExtResource("1_di6ri")
+theme_override_font_sizes/font_size = 30
+text = "Main Menu
+"
+script = ExtResource("2_yqrua")
+SceneToLoad = "uid://cntx34pkpxsds"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+
+
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_di6ri")
+theme_override_font_sizes/font_size = 30
+text = "Options"
+script = ExtResource("4_uusmx")
+
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../ResumeButton")
+theme_override_fonts/font = ExtResource("1_di6ri")
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+script = ExtResource("5_5s851")
+
+[node name="Settings" parent="MarginContainer" instance=ExtResource("2_monga")]
+
+unique_name_in_owner = true
+visible = false

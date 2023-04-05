@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 ## Max velocity acivable 
 @export var maxSpeed : float = 200
+
 ## Variable devide the time needed to parse the accelerection Curve
 @export var accelerationUnit : float = 1
 ## Variable devide the time needed to parse the friction Curve
@@ -17,9 +18,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var friction: float = 0
 var acceleration : float = 0
 
-
 func _physics_process(delta):
-	
 	var direction = get_input()
 	if direction.length() != 0:
 		velocity = velocity.lerp(direction.normalized() * maxSpeed, accelerationCurve.sample(acceleration))
@@ -36,7 +35,8 @@ func _physics_process(delta):
 
 
 func get_input():
-	var input = Vector2()
+	var input = Vector2() 
+	
 	if Input.is_action_pressed('ui_right'):
 		input.x += 1
 	if Input.is_action_pressed('ui_left'):
