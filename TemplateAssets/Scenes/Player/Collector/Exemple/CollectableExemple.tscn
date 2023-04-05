@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5auus3atmyhx"]
+[gd_scene load_steps=3 format=3 uid="uid://difbu5kbqml3c"]
 
-[ext_resource type="Texture2D" uid="uid://b4uw1bklp12sm" path="res://TemplateAssets/Scenes/2D/PickUpItem/placeholder/items.png" id="1_4yp8q"]
+[ext_resource type="Texture2D" uid="uid://b4uw1bklp12sm" path="res://TemplateAssets/Textures/items.png" id="1_012uc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ot1bn"]
 radius = 12.0
@@ -16,7 +16,7 @@ shape = SubResource("CircleShape2D_ot1bn")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_4yp8q")
+texture = ExtResource("1_012uc")
 hframes = 16
 vframes = 16
 frame = 32

@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="GeneralTemplate"
-run/main_scene="res://TemplateAssets/Scenes/UI/main_menu.tscn"
+run/main_scene="res://TemplateAssets/Scenes/UI/MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-SaveData="res://TemplateAssets/Scripts/UI/SaveData.gd"
+SaveData="res://TemplateAssets/Singleton/SaveData.gd"
 SignalEventBusSingleton="*res://TemplateAssets/Singleton/SignalEventBusSingleton.gd"
 
 [display]

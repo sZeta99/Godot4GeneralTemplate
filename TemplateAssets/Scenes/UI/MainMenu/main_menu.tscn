@@ -1,12 +1,10 @@
-
-[gd_scene load_steps=6 format=3 uid="uid://cntx34pkpxsds"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="FontFile" uid="uid://dgryjy84ofn6e" path="res://TemplateAssets/Themes/Fonts/Kenny/Kenney Mini.ttf" id="2_1wm1y"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/LoadSceneButton.gd" id="2_dt2cv"]
-
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/LoadSceneButton.gd" id="2_dt2cv"]
 [ext_resource type="PackedScene" uid="uid://bx5qp3whi8rxq" path="res://TemplateAssets/Scenes/UI/settings_menu.tscn" id="3_ejdsg"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/ExitGameButton.gd" id="3_q6xg4"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/SettingsButton.gd" id="3_vsum0"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/ExitGameButton.gd" id="3_q6xg4"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/SettingsButton.gd" id="3_vsum0"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3

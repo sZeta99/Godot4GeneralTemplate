@@ -1,13 +1,12 @@
-
-[gd_scene load_steps=8 format=3 uid="uid://dcv3qyio37myw"]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="FontFile" uid="uid://dgryjy84ofn6e" path="res://TemplateAssets/Themes/Fonts/Kenny/Kenney Mini.ttf" id="1_di6ri"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/PauseMenu.gd" id="1_rjdih"]
-[ext_resource type="PackedScene" uid="uid://bx5qp3whi8rxq" path="res://TemplateAssets/Scenes/UI/settings_menu.tscn" id="2_monga"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/LoadSceneButton.gd" id="2_yqrua"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/ResumeButton.gd" id="3_sqopa"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/SettingsButton.gd" id="4_uusmx"]
-[ext_resource type="Script" path="res://TemplateAssets/Scripts/UI/ButtonBehavior/ExitGameButton.gd" id="5_5s851"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/PauseMenu/PauseMenu.gd" id="1_rjdih"]
+[ext_resource type="PackedScene" path="res://TemplateAssets/Scenes/UI/SettingsMenu/settings_menu.tscn" id="2_monga"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/LoadSceneButton.gd" id="2_yqrua"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/ResumeButton.gd" id="3_sqopa"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/SettingsButton.gd" id="4_uusmx"]
+[ext_resource type="Script" path="res://TemplateAssets/Scenes/UI/ButtonBehavior/ExitGameButton.gd" id="5_5s851"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 process_mode = 3
