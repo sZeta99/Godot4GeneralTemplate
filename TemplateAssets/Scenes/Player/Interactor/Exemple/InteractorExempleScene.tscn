@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://TemplateAssets/Scenes/Player/Interactor/Exemple/InteractorExemple.gd" id="1_ex0e0"]
 [ext_resource type="Texture2D" uid="uid://b4uw1bklp12sm" path="res://TemplateAssets/Textures/items.png" id="2_jevwx"]
-[ext_resource type="PackedScene" uid="uid://biwkabddirt5q" path="res://TemplateAssets/Scenes/Player/CharacterControllers/TopDown/top_down_character_controller.tscn" id="3_rvxmo"]
+[ext_resource type="PackedScene" uid="uid://d1s0abnaj2fa2" path="res://TemplateAssets/Scenes/Player/CharacterControllers/TopDown/top_down_character_controller.tscn" id="3_rvxmo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aoapw"]
 

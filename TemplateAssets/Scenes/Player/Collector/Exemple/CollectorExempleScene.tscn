@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://difbu5kbqml3c" path="res://TemplateAssets/Scenes/Player/Collector/Exemple/CollectableExemple.tscn" id="1_hgs70"]
 [ext_resource type="Script" path="res://TemplateAssets/Scenes/Player/Collector/Exemple/CollectorUI.gd" id="2_bfxfi"]
-[ext_resource type="PackedScene" uid="uid://biwkabddirt5q" path="res://TemplateAssets/Scenes/Player/CharacterControllers/TopDown/top_down_character_controller.tscn" id="3_1in68"]
+[ext_resource type="PackedScene" uid="uid://d1s0abnaj2fa2" path="res://TemplateAssets/Scenes/Player/CharacterControllers/TopDown/top_down_character_controller.tscn" id="3_1in68"]
 
 [node name="TestScene2D" type="Node2D"]
 
