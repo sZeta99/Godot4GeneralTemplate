@@ -5,11 +5,13 @@ extends Node
 
 ##Enum 
 const ITEM_COLLECTED = "item_collected"
-const HEALTH_SET = "health_set"
+const CURRENT_HEALTH_SET = "current_health_set"
+const MAX_HEALTH_SET = "max_health_set"
 
 # Fired on Collision of CollectrNode
 signal item_collected(item: Node2D)
-signal health_set(entity : Node2D, newHealth : int )
+signal current_health_set(entity : Node2D, newHealth : int )
+signal max_health_set(entity : Node2D, newMaxHealth : int )
 
 
 
