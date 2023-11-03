@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://vdausc3mjakg" path="res://icon.svg" id="2_5v71w"]
 [ext_resource type="PackedScene" path="res://TemplateAssets/Scenes/Player/Interactor/Interactor.tscn" id="3_pgrwc"]
 [ext_resource type="PackedScene" uid="uid://ccs4trsa17dpp" path="res://TemplateAssets/Scenes/Player/Collector/Collector.tscn" id="4_e3k23"]
-[ext_resource type="PackedScene" path="res://TemplateAssets/Scenes/UI/PauseMenu/pause_menu.tscn" id="5_2fbog"]
+[ext_resource type="PackedScene" uid="uid://wrq6cxsvem4i" path="res://TemplateAssets/Scenes/UI/PauseMenu/pause_menu.tscn" id="5_2fbog"]
 
 [sub_resource type="Curve" id="Curve_1r0k5"]
 _data = [Vector2(0.294964, 0.945454), 0.0, 0.0, 0, 0]
